@@ -7,6 +7,10 @@ const authRoutes = require("./src/routes/authRoutes");
 const testRoutes = require("./src/routes/testRoutes");
 const requestRoutes = require("./src/routes/requestRoutes");
 const adminRoutes = require("./src/routes/adminRoutes");
+const aiRoutes = require("./src/routes/aiRoutes.js");
+//const simpleAIRoutes = require("./src/routes/simpleAIRoutes");
+//console.log("AI ROUTES LOADED");
+
 
 const app = express();
 
@@ -23,6 +27,9 @@ app.use("/api/test", testRoutes);
 app.use("/api/requests", requestRoutes);
 app.use("/api/admin", adminRoutes);
 app.use("/uploads", express.static("uploads"));
+app.use("/api/ai", aiRoutes);
+//app.use("/api/ai", simpleAIRoutes);
+
 
 
 
